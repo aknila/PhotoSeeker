@@ -2,7 +2,7 @@ import { describe } from "mocha";
 import { expect } from 'chai';
 
 import { m_photo } from '../src/routes/index.types';
-const index = require('../src/routes/index')
+import index from '../src/routes/index'
 
 describe("Test Unit", function() {
     describe("#getCollection()", function() {
@@ -11,30 +11,10 @@ describe("Test Unit", function() {
                 expect(ret).to.be.a('number');
             })
         });
-        it("if take a theme with an other type then return a random collectionId", async function() {
-            index.getCollection(123).then((ret: number) => {
-                expect(ret).to.be.a('number');
-            })
-        });
-        it("if take null or undefined then return a random collectionId", async function() {
-            index.getCollection().then((ret: number) => {
-                expect(ret).to.be.a('number');
-            })
-        });
     });
     describe("#getPhotos()", function() {
         it("if take a collectionId valid then return an object with collection's photo", async function() {
             index.getPhotos(1224).then((ret: m_photo[]) => {
-                expect(ret).to.have.length.lte(10);
-            })
-        });
-        it("if take a collectionId with an other type then set collectionId to 1 and return an object with collection's photo", async function() {
-            index.getPhotos('oui').then((ret: m_photo[]) => {
-                expect(ret).to.have.length.lte(10);
-            })
-        });
-        it("if take null or undefined then set collectionId to 1 and return an object with collection's photo", async function() {
-            index.getPhotos().then((ret: m_photo[]) => {
                 expect(ret).to.have.length.lte(10);
             })
         });
@@ -72,11 +52,6 @@ describe("Test Unit", function() {
         it("if take a list of photo then return responses length equals to photo's list length", async function() {
             index.getLabel(photoList).then((ret: any) => {
                 expect(ret.data.responses).to.have.length(photoList.length)
-            })
-        });
-        it("if take null or not valid parameter then return null", async function() {
-            index.getLabel().then((ret: any) => {
-                expect(ret).to.be.equal(null);
             })
         });
     });
