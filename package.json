@@ -13,8 +13,8 @@
     "run-docker": "docker run -p 3000:80 photo-seeker"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/"
+    "type": "git",
+    "url": "https://github.com/aknila/PhotoSeeker"
   },
   "author": "aancel",
   "license": "ISC",
