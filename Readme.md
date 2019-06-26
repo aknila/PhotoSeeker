@@ -1,9 +1,13 @@
 # PhotoSeeker
 
 PhotoSeeker est une api qui permet de récupérer des photos depuis Unsplash pour ensuite les filtrer en utilisant Vision de Google.
+
 La route disponible est `/collection/seek?theme={theme}&filter={assets}`.
+
 Theme: Thème de la collection d&apos;image dans laquelle les photos vont être récupérées.
+
 Assets: Filtres à partir desquelles les photos vont être triées.
+
 L&apos;api renvoie un objet contenant `filtered_collection_pictures` et `collection_pictures`
 - `filtered_collection_pictures`: liste de photo qui correspondent a un filtre
 - `filtered_collection_pictures`: liste contenant le reste des photos
