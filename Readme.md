@@ -14,12 +14,13 @@ L&apos;api renvoie un objet contenant `filtered_collection_pictures` et `collect
 
 L&apos;api ne renvoie que 10 images par requête.
 
-#### Préparation
+#### Préparation et installation
 - Créer une application sur [Unsplash](https://unsplash.com/developers)
 - Créer un projet sur [Google Cloud Platform](https://cloud.google.com/vision/) et ajouter la bibliothèque Vision
 - Remplacer dans le fichier `config/api_key.ts`:
 	- `{YOUR_CLIENT_ID}`: L'id client de l'application Unsplash
 	- `{YOUR_API_KEY}`: La clé d'api du projet crée sur Google Cloud Platform
+- Installer les modules avec `npm install`
 
 #### Lancement
 - Avec Docker
